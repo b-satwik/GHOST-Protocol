@@ -1,0 +1,12 @@
+{
+    "test_records": 150,
+    "classes": 5,
+    "accuracy": 0.16,
+    "macro_precision": 0.08964646464646464,
+    "macro_recall": 0.13333333333333333,
+    "macro_f1": 0.10232266164469554,
+    "weighted_precision": 0.10757575757575757,
+    "weighted_recall": 0.16,
+    "weighted_f1": 0.12278719397363465,
+    "device": "cpu"
+}

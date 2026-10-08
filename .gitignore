@@ -1,0 +1,68 @@
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv
+.venv/
+.venv*
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+
+# Databases & Runtime State
+*.db
+*.sqlite
+*.sqlite3
+*.lock
+logs/
+*.log
+runtime/
+data/
+darkwatch_labs/hs_data/
+hs_data/
+
+# Large Model Binaries (> 100MB limit for GitHub without LFS)
+*.safetensors
+
+# Datasets & Large CSV / ZIP Data Dumps
+*.zip
+dataset/*.json
+dataset/*.zip
+dataset/Labeled Dataset*
+darkwatch_text_lab/data/
+whonix_collector_share/data/
+reports/training/*.csv
+models/temporal_v2/*.csv
+
+# Temporary Scratch State & Browser Profiles
+scratch/profiles/
+scratch/locks/
+scratch/tor_instances/
+scratch/*.db
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store

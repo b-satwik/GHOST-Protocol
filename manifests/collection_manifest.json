@@ -1,0 +1,24 @@
+{
+  "last_updated": "2026-09-27T14:50:30.424315+00:00",
+  "total_collection_runs": 1,
+  "total_records_collected": 1,
+  "total_canonical_documents": 7,
+  "total_duplicates_excluded": 0,
+  "runs": [
+    {
+      "run_id": "run_recovered_from_db",
+      "timestamp": "2026-09-27T14:50:30.424307+00:00",
+      "attempts_count": 1,
+      "gold_records_generated": 7,
+      "records": [
+        {
+          "source_id": "SRC_DEMO_001",
+          "onion_address": "http://loki2botnet.lab.onion",
+          "state": "CONTENT_ACCESSIBLE",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text_length": 219
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+split,records,start_date,end_date
+train,271266,2020-12-14,2023-01-09
+validation,75298,2023-01-10,2024-04-01
+test,41815,2024-04-03,2024-10-22

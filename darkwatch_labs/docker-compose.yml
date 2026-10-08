@@ -1,0 +1,31 @@
+version: '3.8'
+
+networks:
+  darkwatch-net:
+    driver: bridge
+
+services:
+  darkwatch-services:
+    build: ./services
+    container_name: darkwatch-services
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./services:/app
+      - ./hs_data:/app/data
+      - ./hs_data:/app/hs_data
+    networks:
+      - darkwatch-net
+
+  darkwatch-tor-router:
+    build: ./tor_config
+    container_name: darkwatch-tor-router
+    ports:
+      - "9050:9050"
+    volumes:
+      - ./hs_data/shadowboard:/var/lib/tor/shadowboard
+      - ./hs_data:/var/lib/tor/services
+    depends_on:
+      - darkwatch-services
+    networks:
+      - darkwatch-net

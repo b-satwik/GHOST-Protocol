@@ -1,0 +1,29 @@
+{
+    "records": 41815,
+    "behavioral_features": 39,
+    "temporal_features": 14,
+    "semantic_classes": 29,
+    "behavioral_weight": 0.4,
+    "temporal_weight": 0.35,
+    "semantic_weight": 0.25,
+    "behavioral_threshold_95": 0.24472248554229736,
+    "behavioral_threshold_99": 0.6060376167297363,
+    "temporal_threshold_95": 0.06371290419999999,
+    "temporal_threshold_99": 0.17787216360000002,
+    "behavioral_anomalies_95": 2091,
+    "behavioral_anomalies_99": 419,
+    "temporal_anomalies_95": 2091,
+    "temporal_anomalies_99": 419,
+    "semantic_confidence_mean": 0.7732084393501282,
+    "semantic_confidence_median": 0.8418760895729065,
+    "two_or_more_signals": 2922,
+    "three_signal_cases": 79,
+    "mean_fusion_score": 0.20988009721777362,
+    "median_fusion_score": 0.21273192763328552,
+    "fusion_band_counts": {
+        "LOW": 39632,
+        "MODERATE": 1903,
+        "ELEVATED": 254,
+        "HIGH": 26
+    }
+}

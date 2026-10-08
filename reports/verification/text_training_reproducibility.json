@@ -1,0 +1,52 @@
+{
+  "project_name": "DarkWatch XAI",
+  "stage": "2.5 Evidence Audit & Training Reproducibility",
+  "timestamp_utc": "2026-09-25T18:40:00Z",
+  "environment": {
+    "python_version": "3.12.3",
+    "pytorch_version": "2.14.0+cpu",
+    "transformers_version": "5.17.0",
+    "scikit_learn_version": "1.9.0",
+    "pandas_version": "2.5.2"
+  },
+  "dataset_splits": {
+    "train_rows": 271266,
+    "validation_rows": 75298,
+    "test_rows": 41815,
+    "total_rows": 388379,
+    "sum_matches_total": true,
+    "chronological_split_verified": true,
+    "overlap_between_train_val": 15453,
+    "overlap_between_train_test": 2541,
+    "overlap_between_val_test": 5644
+  },
+  "baseline_model": {
+    "directory": "models/dwdata_text_model",
+    "architecture": "DistilBertForSequenceClassification",
+    "num_classes": 29,
+    "model_size_bytes": 267915620,
+    "sha256": "c9fc543e2af2932c0d54020aef1c60ad68832a8fefca7c637a72dcf2ea354c46",
+    "evaluations": {
+      "unmapped_exact_string_accuracy": 0.0028,
+      "mapped_category_taxonomy_accuracy": 0.4720,
+      "mapped_category_balanced_accuracy": 0.1640
+    }
+  },
+  "candidate_strategies": {
+    "candidate_a_weighted_loss": {
+      "script": "learning/training/train_text_model_v2.py --strategy weighted_loss",
+      "status": "SCRIPT_VERIFIED_PENDING_GPU_EXECUTION",
+      "class_weight_source": "Train Split Only (271,266 records)",
+      "output_directory": "models/dwdata_text_model_weighted_loss"
+    },
+    "candidate_b_controlled_oversampling": {
+      "script": "learning/training/train_text_model_v2.py --strategy controlled_oversampling",
+      "status": "SCRIPT_VERIFIED_PENDING_GPU_EXECUTION",
+      "original_train_size": 271266,
+      "oversampled_train_size": 273950,
+      "validation_touched": false,
+      "test_touched": false,
+      "output_directory": "models/dwdata_text_model_controlled_oversampling"
+    }
+  }
+}

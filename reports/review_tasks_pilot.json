@@ -1,0 +1,134 @@
+{
+  "export_timestamp": "2026-09-26T18:30:50.239655+00:00",
+  "task_count": 1,
+  "instructions": "Set human_validation_confirmed to true, specify annotator_id, adjust verified labels if needed, and re-import file.",
+  "tasks": [
+    {
+      "record_id": "gold_col_1",
+      "sanitized_text": "SELLING LOKI 2.0 BOTNET & KEYLOGGER SOURCE CODE. Includes Windows RCE Zero-Day exploit CVE-2024-38077 and 500x stolen RDP access credentials. Command and control server IP: 192.168.1.100. Contact via Telegram or jabber.",
+      "candidate_labels": {
+        "activity_categories": [
+          "CREDENTIAL_LEAK",
+          "ACCESS_BROKERAGE",
+          "MALWARE_SALES",
+          "EXPLOIT_DISTRIBUTION"
+        ],
+        "intent": "ILLICIT_SALE",
+        "severity": "CRITICAL",
+        "target_sector": [
+          "TECHNOLOGY"
+        ]
+      },
+      "cti_entities": {
+        "malware": [
+          "loki",
+          "keylogger",
+          "botnet"
+        ],
+        "vulnerabilities": [
+          "CVE-2024-38077",
+          "exploit",
+          "zero-day",
+          "rce"
+        ],
+        "cves": [
+          "CVE-2024-38077"
+        ],
+        "credentials_access": [
+          "rdp access",
+          "rdp"
+        ],
+        "attack_tools": [],
+        "iocs": {
+          "ip_addresses": [
+            "192.168.1.100"
+          ],
+          "onion_domains": [],
+          "hashes": [],
+          "emails": []
+        },
+        "stix_indicators": [
+          {
+            "indicator_type": "ipv4-addr",
+            "raw_indicator": "192.168.1.100",
+            "normalized_value": "192.168.1.100",
+            "extraction_method": "REGEX_PATTERN",
+            "is_observed": true
+          },
+          {
+            "indicator_type": "vulnerability-cve",
+            "raw_indicator": "CVE-2024-38077",
+            "normalized_value": "CVE-2024-38077",
+            "extraction_method": "REGEX_PATTERN",
+            "is_observed": true
+          },
+          {
+            "indicator_type": "malware-name",
+            "raw_indicator": "botnet",
+            "normalized_value": "Botnet",
+            "extraction_method": "TAXONOMY_MATCH",
+            "is_observed": true
+          },
+          {
+            "indicator_type": "malware-name",
+            "raw_indicator": "keylogger",
+            "normalized_value": "Keylogger",
+            "extraction_method": "TAXONOMY_MATCH",
+            "is_observed": true
+          },
+          {
+            "indicator_type": "malware-name",
+            "raw_indicator": "loki",
+            "normalized_value": "Loki",
+            "extraction_method": "TAXONOMY_MATCH",
+            "is_observed": true
+          }
+        ]
+      },
+      "mitre_mappings": [
+        {
+          "technique_id": "T1078",
+          "technique_name": "Valid Accounts",
+          "tactic": null
+        },
+        {
+          "technique_id": "T1190",
+          "technique_name": "Exploit Public-Facing Application",
+          "tactic": null
+        },
+        {
+          "technique_id": "T1071",
+          "technique_name": "Application Layer Protocol",
+          "tactic": null
+        }
+      ],
+      "provenance": {
+        "collector_attempt_id": 1,
+        "source_id": "SRC_DEMO_001",
+        "onion_address": "http://loki2botnet.lab.onion",
+        "timestamp": "2026-09-26T21:00:00Z",
+        "http_status": 200,
+        "state": "CONTENT_ACCESSIBLE",
+        "sanitized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "is_demo_observation": true
+      },
+      "human_review_input": {
+        "human_validation_confirmed": false,
+        "annotator_id": "",
+        "verified_activity_categories": [
+          "CREDENTIAL_LEAK",
+          "ACCESS_BROKERAGE",
+          "MALWARE_SALES",
+          "EXPLOIT_DISTRIBUTION"
+        ],
+        "verified_intent": "ILLICIT_SALE",
+        "verified_severity": "CRITICAL",
+        "verified_target_sector": [
+          "TECHNOLOGY"
+        ],
+        "disputed": false,
+        "review_notes": ""
+      }
+    }
+  ]
+}

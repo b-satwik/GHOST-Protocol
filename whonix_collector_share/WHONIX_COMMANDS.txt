@@ -1,0 +1,31 @@
+========================================================================
+DARKWATCH COMMAND QUICK REFERENCE: HOST vs. WHONIX WORKSTATION
+========================================================================
+
+HOST MACHINE (Docker Controlled Lab Environment):
+Start Docker:
+  commands/start_docker_lab.sh
+
+Stop Docker:
+  commands/stop_docker_lab.sh
+
+Check Docker Status:
+  commands/check_docker_lab.sh
+
+------------------------------------------------------------------------
+WHONIX WORKSTATION (Isolated Research Collector Environment):
+Workstation Startup Info:
+  ./commands/whonix/whonix_startup.sh
+
+Check Tor Proxy:
+  ./commands/whonix/whonix_check_tor.sh
+
+Check DarkWatch .onion Service:
+  ./commands/whonix/whonix_check_darkwatch.sh
+
+Run Whonix Collector:
+  ./commands/whonix/whonix_run_collector.sh
+
+Open links:
+  cat DARKWATCH_LAB_LINKS.txt
+========================================================================

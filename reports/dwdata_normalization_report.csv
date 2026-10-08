@@ -1,0 +1,12 @@
+metric,value
+duplicate_files,36
+duplicate_rows_removed,85852
+empty_files,1
+files_discovered,219
+output_rows,388379
+rows_recovered,474231
+unique_vendors,2024
+unique_marketplaces,16
+unique_categories,268
+unique_listings,70918
+snapshot_dates,80

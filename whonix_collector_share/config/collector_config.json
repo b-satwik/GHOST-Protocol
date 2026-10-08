@@ -1,0 +1,14 @@
+{
+  "socks_proxy": "127.0.0.1:9050",
+  "whonix_gateway_proxy": "socks5h://10.152.152.10:9050",
+  "tor_check_url": "https://check.torproject.org/api/ip",
+  "request_timeout": 10,
+  "max_content_bytes": 2097152,
+  "user_agent": "DarkWatch-Collector/1.0 (Research/Isolated)",
+  "sqlite_db_path": "data/collector_evidence.db",
+  "min_text_length": 20,
+  "allowed_content_types": [
+    "text/html",
+    "application/xhtml+xml"
+  ]
+}

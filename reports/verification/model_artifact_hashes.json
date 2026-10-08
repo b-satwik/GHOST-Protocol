@@ -1,0 +1,42 @@
+{
+  "models/dwdata_tabular_model/scaler.joblib": {
+    "size_bytes": 2511,
+    "sha256": "d044132d77ee4266523f4fa4cb2fac8a58e1143aa6c5ddcd1e7c141142d2d6fb"
+  },
+  "models/dwdata_tabular_model/model.pt": {
+    "size_bytes": 61275,
+    "sha256": "fe0109df2c1dadfd478f54f0b054e20e651f6fca2c8cac40abde1aac7b0b9ac8"
+  },
+  "models/dwdata_tabular_model/features.json": {
+    "size_bytes": 2748,
+    "sha256": "52417a9daf023edbbb199adce46b704417f2008923231de7b63f1ea0c2bd4538"
+  },
+  "models/dwdata_temporal_model/temporal_scaler.npz": {
+    "size_bytes": 1490,
+    "sha256": "aa5abeff996c3c89b2cfdea3d0bb902ed50632a5bc303b86b8cf6069ccb29d24"
+  },
+  "models/dwdata_temporal_model/temporal_autoencoder.pt": {
+    "size_bytes": 14761,
+    "sha256": "988300f70fe505971d4663a0514d014333e67274fe1604c84f83ad26c1ad363e"
+  },
+  "models/dwdata_temporal_model/temporal_features.json": {
+    "size_bytes": 438,
+    "sha256": "e3d75eaa1a002a0cc84299f340174876f7c0ba590733f81c861a4c6b209e57dc"
+  },
+  "models/dwdata_text_model/config.json": {
+    "size_bytes": 2158,
+    "sha256": "db779ca2e0e731291bbfb8e01390f0f367dc6fbd7b238cb9fbebf48eeb42d9e4"
+  },
+  "models/dwdata_text_model/tokenizer.json": {
+    "size_bytes": 711493,
+    "sha256": "d542861653d0d204783c94395fdf32eef9e800d5fa565a2892c3f1375aa835e9"
+  },
+  "models/dwdata_text_model/tokenizer_config.json": {
+    "size_bytes": 336,
+    "sha256": "c5e19a8504461b09408a8d30aa9411ea95ddd07c18dec628a79cac6b5722739d"
+  },
+  "models/dwdata_text_model/model.safetensors": {
+    "size_bytes": 267915620,
+    "sha256": "c9fc543e2af2932c27c934bb26c064f9fb39b6f2e5f8fcaa56205d5c5eba763d"
+  }
+}

@@ -1,0 +1,12 @@
+http://shadowboard.lab.onion/forum
+
+# DarkWatch Controlled Docker Laboratory Endpoints:
+# Forum (Normal):      http://shadowboard.lab.onion/forum
+# Barrier (CAPTCHA):  http://shadowboard.lab.onion/barrier
+# Session Gated:       http://shadowboard.lab.onion/session_gated
+# Marketplace (Static):http://shadowboard.lab.onion/market
+# Dynamic Forum:       http://shadowboard.lab.onion/dynamic_forum
+# Forum Mirror:        http://shadowboard.lab.onion/forum_mirror
+
+# Local Clearnet Fallback:
+# http://localhost:8080/forum

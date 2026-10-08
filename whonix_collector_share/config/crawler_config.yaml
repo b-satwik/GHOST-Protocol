@@ -1,0 +1,72 @@
+# DarkWatch Real Corpus Crawler & Verifier Configuration
+# Strictly passive, text/metadata-focused collection configuration for real corpus expansion.
+
+proxy:
+  socks5_proxy: "socks5h://10.152.152.10:9050"
+  whonix_gateway_ip: "10.152.152.10"
+  whonix_socks_port: 9050
+
+collection_rules:
+  passive_http_get_only: true
+  text_only: true
+  max_response_bytes: 2097152 # 2 MB hard limit per page response
+  request_delay_seconds: 2.0
+  max_crawl_depth: 2
+  max_pages_per_source_default: 10
+  min_useful_text_length: 50
+  timeout_seconds: 30
+  allowed_content_types:
+    - "text/html"
+    - "text/plain"
+    - "application/xhtml+xml"
+  user_agent: "DarkWatch-Research-Collector/1.0 (Passive Threat Intelligence Collection)"
+
+target_text_fields:
+  - "record_id"
+  - "source_id"
+  - "source_url"
+  - "collection_timestamp"
+  - "page_url"
+  - "title"
+  - "sanitized_text"
+  - "content_hash"
+  - "duplicate_status"
+  - "source_type"
+  - "category"
+  - "provenance"
+
+target_cti_fields:
+  - "urls"
+  - "domains"
+  - "ips"
+  - "hashes"
+  - "cves"
+  - "malware_names"
+  - "tools"
+  - "threat_indicators"
+  - "mitre_mappings"
+
+retry_policy:
+  max_retries: 3
+  backoff_factor: 2.0
+
+state_handling:
+  valid_states:
+    - REACHABLE
+    - CONTENT_ACCESSIBLE
+    - AUTOMATED_ACCESS_BLOCKED
+    - OFFLINE
+    - UNCERTAIN
+
+safety_constraints:
+  no_captcha_bypass: true
+  no_authentication_bypass: true
+  no_credential_submission: true
+  no_javascript_execution: true
+  no_exploitation_or_probing: true
+  no_deanonymization_attempts: true
+  no_executable_downloads: true
+  no_media_downloads: true
+  no_stealer_log_downloads: true
+  no_victim_file_downloads: true
+  no_credential_harvesting: true

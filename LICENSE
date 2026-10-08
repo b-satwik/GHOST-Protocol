@@ -1,0 +1,37 @@
+GHOST PROTOCOL RESTRICTED ACADEMIC RESEARCH LICENSE
+=====================================================
+
+Copyright (c) 2026 GHOST Protocol Research Group. All rights reserved.
+
+RESTRICTIONS AND TERMS OF USE:
+
+1. ACADEMIC & RESEARCH USE ONLY:
+   This codebase, software, models, architecture, and associated documentation 
+   ("GHOST Protocol") are made available strictly for non-commercial academic, 
+   educational, and controlled cybersecurity research purposes.
+
+2. NO COMMERCIAL USE:
+   Commercial use, monetization, integration into proprietary products, or use in 
+   commercial security operations without explicit prior written permission 
+   from the copyright holders is strictly prohibited.
+
+3. NO REDISTRIBUTION:
+   Redistribution, republishing, hosting, or broadcasting of this source code, 
+   trained weights, internal artifacts, or derived data in whole or in part is 
+   strictly prohibited without prior written authorization.
+
+4. NO UNQUALIFIED MODIFICATION OR DERIVATIVE WORKS:
+   Modification, creation of derivative works, re-licensing, or re-branding 
+   of this software for public release is prohibited.
+
+5. CONTROLLED ENVIRONMENT MANDATE:
+   This software is designed and authorized strictly for execution within 
+   isolated, controlled virtual laboratories (e.g., local Docker laboratories). 
+   Unauthorized deployment against external production systems, unauthorized 
+   networks, or unapproved targets is strictly prohibited.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR 
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES.

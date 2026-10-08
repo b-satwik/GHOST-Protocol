@@ -1,0 +1,24 @@
+{
+  "policy_name": "DarkWatch XAI Transparent Analyst Risk Policy",
+  "version": "2.0",
+  "note": "Project-specific risk policy weights are an explicit design decision for transparent severity calculation rather than an established universal standard.",
+  "weights": {
+    "ml_fusion_weight": 0.40,
+    "mitre_cti_weight": 0.35,
+    "entity_criticality_weight": 0.25
+  },
+  "severity_thresholds": {
+    "LOW": 0.15,
+    "MODERATE": 0.35,
+    "ELEVATED": 0.60,
+    "HIGH": 1.00
+  },
+  "critical_entity_multipliers": {
+    "cve_found": 0.35,
+    "ransomware_found": 0.40,
+    "malware_rat_found": 0.30,
+    "zero_day_found": 0.45,
+    "credentials_found": 0.25,
+    "iocs_found": 0.20
+  }
+}

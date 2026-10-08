@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "name": "GHOST Protocol Cyber Security Vocabulary & Intent Dictionary",
+  "threat_types": [
+    "breach", "leak", "database leak", "credential sale", "ransomware", "malware",
+    "botnet", "ddos", "phishing", "exploit", "access", "initial access", "stolen data",
+    "exfiltration", "extortion", "payload", "command and control", "c2", "infrastructure",
+    "compromised", "victim", "target"
+  ],
+  "observation_intents": [
+    "observe", "watch", "monitor", "capture", "collect", "crawl", "check", "scan",
+    "follow", "track", "watch continuously"
+  ],
+  "history_intents": [
+    "before", "previously", "earlier", "again", "recurring", "appeared", "disappeared",
+    "came back", "returned", "first seen", "last seen", "where", "when", "history", "timeline"
+  ],
+  "correlation_intents": [
+    "same person", "same actor", "same user", "same site", "related", "connected", "linked",
+    "appears elsewhere", "seen on", "associated with", "alias", "replaced", "moved", "infrastructure shift"
+  ],
+  "explanation_intents": [
+    "why", "explain", "evidence", "reason", "model", "confidence", "decision", "flagged",
+    "detected", "risk", "deep analysis"
+  ],
+  "source_states": [
+    "online", "offline", "down", "unavailable", "returned", "reappeared", "blocked",
+    "login required", "2fa", "two-step", "browser required", "session required"
+  ],
+  "search_intents": [
+    "find", "search", "show", "locate", "where", "which", "related", "mentions", "contains"
+  ]
+}

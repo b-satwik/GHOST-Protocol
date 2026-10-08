@@ -1,0 +1,8 @@
+{
+  "eval_loss": 0.4356841742992401,
+  "eval_accuracy": 0.8897571277719113,
+  "eval_macro_precision": 0.8842282835361917,
+  "eval_macro_recall": 0.8954577604777073,
+  "eval_macro_f1": 0.8892726891719908,
+  "eval_weighted_f1": 0.8894557268319769
+}

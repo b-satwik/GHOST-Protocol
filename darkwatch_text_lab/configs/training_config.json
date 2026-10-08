@@ -1,0 +1,19 @@
+{
+  "random_seed": 42,
+  "model_name": "distilbert-base-uncased",
+  "max_length": 32,
+  "batch_size": 64,
+  "learning_rate": 3e-05,
+  "epochs": 3,
+  "num_workers": 4,
+  "use_cuda": true,
+  "mixed_precision": true,
+  "offline_mode": false,
+  "dataset_version": "dataset_v1",
+  "output_dirs": {
+    "models": "models/",
+    "metrics": "results/metrics/",
+    "error_analysis": "results/error_analysis/",
+    "xai": "results/xai/"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "model": "distilbert-base-uncased",
+  "device": "cpu",
+  "train_samples": 5000,
+  "validation_samples": 1000,
+  "test_samples": 1000,
+  "classes": 29,
+  "epochs": 1,
+  "test_metrics": {
+    "loss": 2.0539507126808165,
+    "accuracy": 0.47,
+    "precision": 0.9207368341303195,
+    "recall": 0.47,
+    "f1": 0.619782458157377
+  }
+}

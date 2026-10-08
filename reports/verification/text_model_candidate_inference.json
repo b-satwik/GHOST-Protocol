@@ -1,0 +1,287 @@
+{
+  "baseline_model": {
+    "path": "models/dwdata_text_model",
+    "predictions": [
+      {
+        "sentence": "Selling Loki 2.0 Botnet keylogger source code with RDP access",
+        "predicted_class": "OTHER_SEMANTIC",
+        "top_confidence": 0.5426,
+        "probabilities_sum": 1.0,
+        "top_5": [
+          {
+            "class": "OTHER_SEMANTIC",
+            "probability": 0.5426
+          },
+          {
+            "class": "software / hosting",
+            "probability": 0.0866
+          },
+          {
+            "class": "hacking",
+            "probability": 0.081
+          },
+          {
+            "class": "software & malware",
+            "probability": 0.0446
+          },
+          {
+            "class": "genuine",
+            "probability": 0.0284
+          }
+        ]
+      },
+      {
+        "sentence": "CVE-2024-30078 zero-day exploit for Windows Kernel remote code execution",
+        "predicted_class": "OTHER_SEMANTIC",
+        "top_confidence": 0.7016,
+        "probabilities_sum": 1.0,
+        "top_5": [
+          {
+            "class": "OTHER_SEMANTIC",
+            "probability": 0.7016
+          },
+          {
+            "class": "software / hosting",
+            "probability": 0.0503
+          },
+          {
+            "class": "hacking",
+            "probability": 0.047
+          },
+          {
+            "class": "tutorials",
+            "probability": 0.0214
+          },
+          {
+            "class": "software & malware",
+            "probability": 0.021
+          }
+        ]
+      },
+      {
+        "sentence": "Fresh batch of 500x corporate RDP access logins and admin password combo lists",
+        "predicted_class": "OTHER_SEMANTIC",
+        "top_confidence": 0.6909,
+        "probabilities_sum": 1.0,
+        "top_5": [
+          {
+            "class": "OTHER_SEMANTIC",
+            "probability": 0.6909
+          },
+          {
+            "class": "goods",
+            "probability": 0.0402
+          },
+          {
+            "class": "hacking",
+            "probability": 0.0337
+          },
+          {
+            "class": "data",
+            "probability": 0.0269
+          },
+          {
+            "class": "software / hosting",
+            "probability": 0.0254
+          }
+        ]
+      },
+      {
+        "sentence": "Detailed cybersecurity tutorial on configuring Linux firewall iptables and SSH keys",
+        "predicted_class": "OTHER_SEMANTIC",
+        "top_confidence": 0.7742,
+        "probabilities_sum": 1.0,
+        "top_5": [
+          {
+            "class": "OTHER_SEMANTIC",
+            "probability": 0.7742
+          },
+          {
+            "class": "tutorials",
+            "probability": 0.0502
+          },
+          {
+            "class": "hacking",
+            "probability": 0.0363
+          },
+          {
+            "class": "software / hosting",
+            "probability": 0.026
+          },
+          {
+            "class": "methods",
+            "probability": 0.0183
+          }
+        ]
+      },
+      {
+        "sentence": "Organic green tea leaves imported directly from Japan Kyoto gardens",
+        "predicted_class": "drugs",
+        "top_confidence": 0.5918,
+        "probabilities_sum": 1.0,
+        "top_5": [
+          {
+            "class": "drugs",
+            "probability": 0.5918
+          },
+          {
+            "class": "OTHER_SEMANTIC",
+            "probability": 0.1662
+          },
+          {
+            "class": "goods",
+            "probability": 0.031
+          },
+          {
+            "class": "digital goods",
+            "probability": 0.0282
+          },
+          {
+            "class": "personal info (ssn / dob / fullz / scans)",
+            "probability": 0.0279
+          }
+        ]
+      },
+      {
+        "sentence": "Uncut cocaine and high purity MDMA pills available for shipping",
+        "predicted_class": "drugs",
+        "top_confidence": 0.8415,
+        "probabilities_sum": 1.0,
+        "top_5": [
+          {
+            "class": "drugs",
+            "probability": 0.8415
+          },
+          {
+            "class": "OTHER_SEMANTIC",
+            "probability": 0.0281
+          },
+          {
+            "class": "personal info (ssn / dob / fullz / scans)",
+            "probability": 0.0165
+          },
+          {
+            "class": "digital goods",
+            "probability": 0.0144
+          },
+          {
+            "class": "goods",
+            "probability": 0.0143
+          }
+        ]
+      },
+      {
+        "sentence": "Cracked Adobe Creative Cloud 2024 license patch generator",
+        "predicted_class": "OTHER_SEMANTIC",
+        "top_confidence": 0.6534,
+        "probabilities_sum": 1.0,
+        "top_5": [
+          {
+            "class": "OTHER_SEMANTIC",
+            "probability": 0.6534
+          },
+          {
+            "class": "hacking",
+            "probability": 0.0613
+          },
+          {
+            "class": "software / hosting",
+            "probability": 0.0595
+          },
+          {
+            "class": "software & malware",
+            "probability": 0.0359
+          },
+          {
+            "class": "tutorials",
+            "probability": 0.0229
+          }
+        ]
+      },
+      {
+        "sentence": "Stolen credit card dumps with full CVV zip codes and PINs",
+        "predicted_class": "OTHER_SEMANTIC",
+        "top_confidence": 0.8697,
+        "probabilities_sum": 1.0,
+        "top_5": [
+          {
+            "class": "OTHER_SEMANTIC",
+            "probability": 0.8697
+          },
+          {
+            "class": "tutorials",
+            "probability": 0.0244
+          },
+          {
+            "class": "accounts & bank drops",
+            "probability": 0.0126
+          },
+          {
+            "class": "goods",
+            "probability": 0.0108
+          },
+          {
+            "class": "forgeries / counterfeits",
+            "probability": 0.0079
+          }
+        ]
+      },
+      {
+        "sentence": "Hacking service for hire: custom phishing landing page setup",
+        "predicted_class": "OTHER_SEMANTIC",
+        "top_confidence": 0.6516,
+        "probabilities_sum": 1.0,
+        "top_5": [
+          {
+            "class": "OTHER_SEMANTIC",
+            "probability": 0.6516
+          },
+          {
+            "class": "hacking",
+            "probability": 0.0704
+          },
+          {
+            "class": "software / hosting",
+            "probability": 0.0585
+          },
+          {
+            "class": "tutorials",
+            "probability": 0.039
+          },
+          {
+            "class": "methods",
+            "probability": 0.0228
+          }
+        ]
+      },
+      {
+        "sentence": "Passport scans, SSN, DOB fullz database leak 2024",
+        "predicted_class": "OTHER_SEMANTIC",
+        "top_confidence": 0.7025,
+        "probabilities_sum": 1.0,
+        "top_5": [
+          {
+            "class": "OTHER_SEMANTIC",
+            "probability": 0.7025
+          },
+          {
+            "class": "data",
+            "probability": 0.0553
+          },
+          {
+            "class": "goods",
+            "probability": 0.0304
+          },
+          {
+            "class": "forgeries / counterfeits",
+            "probability": 0.0196
+          },
+          {
+            "class": "accounts & bank drops",
+            "probability": 0.0193
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "input_records": 388379,
+  "temporal_records": 388379,
+  "train_records": 271865,
+  "validation_records": 48547,
+  "test_records": 67967,
+  "feature_count": 14,
+  "features": [
+    "snapshot_year",
+    "snapshot_month",
+    "snapshot_quarter",
+    "snapshot_day_of_month",
+    "snapshot_day_of_week",
+    "snapshot_is_weekend",
+    "days_since_first_snapshot",
+    "vendor_activity_days",
+    "vendor_listing_count",
+    "marketplace_listing_count",
+    "vendor_observation_number",
+    "vendor_previous_observation_gap",
+    "category_frequency",
+    "marketplace_vendor_count"
+  ],
+  "scaler": "StandardScaler",
+  "scaler_fit_on": "training_split_only",
+  "random_state": 42,
+  "before_normalization": {
+    "snapshot_year": {
+      "mean": 2022.3986831699556,
+      "std": 0.7550395882319111,
+      "min": 2020.0,
+      "max": 2024.0
+    },
+    "snapshot_month": {
+      "mean": 6.4329685689588585,
+      "std": 2.451408644945196,
+      "min": 1.0,
+      "max": 12.0
+    },
+    "snapshot_quarter": {
+      "mean": 2.5135747521747924,
+      "std": 0.8525243589661528,
+      "min": 1.0,
+      "max": 4.0
+    },
+    "snapshot_day_of_month": {
+      "mean": 15.185606826917772,
+      "std": 9.061416089152253,
+      "min": 1.0,
+      "max": 31.0
+    },
+    "snapshot_day_of_week": {
+      "mean": 1.5347654166590035,
+      "std": 1.8246559495337002,
+      "min": 0.0,
+      "max": 6.0
+    },
+    "snapshot_is_weekend": {
+      "mean": 0.09843120666507274,
+      "std": 0.29789734916905247,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "days_since_first_snapshot": {
+      "mean": 707.085663840509,
+      "std": 273.84965030067883,
+      "min": 0.0,
+      "max": 1408.0
+    },
+    "vendor_activity_days": {
+      "mean": 25.14848913983043,
+      "std": 16.322617701742523,
+      "min": 1.0,
+      "max": 70.0
+    },
+    "vendor_listing_count": {
+      "mean": 6903.236253287478,
+      "std": 7337.596700464796,
+      "min": 1.0,
+      "max": 25528.0
+    },
+    "marketplace_listing_count": {
+      "mean": 82224.67597888657,
+      "std": 67769.42254435521,
+      "min": 1047.0,
+      "max": 161077.0
+    },
+    "vendor_observation_number": {
+      "mean": 3451.9939418461367,
+      "std": 4683.792111217704,
+      "min": 1.0,
+      "max": 25528.0
+    },
+    "vendor_previous_observation_gap": {
+      "mean": 0.7944089897559451,
+      "std": 14.208132556464923,
+      "min": 0.0,
+      "max": 989.0
+    },
+    "category_frequency": {
+      "mean": 59815.190410681775,
+      "std": 45113.626509725094,
+      "min": 1.0,
+      "max": 109079.0
+    },
+    "marketplace_vendor_count": {
+      "mean": 272.2671068361135,
+      "std": 168.5859506610435,
+      "min": 22.0,
+      "max": 546.0
+    }
+  },
+  "after_normalization": {
+    "snapshot_year": {
+      "mean": 1.3436072633066873e-13,
+      "std": 1.0000018391531804,
+      "min": -3.1769030642729645,
+      "max": 2.120842138703221
+    },
+    "snapshot_month": {
+      "mean": -7.736216496606391e-17,
+      "std": 1.0000018391531802,
+      "min": -2.2162680107305164,
+      "max": 2.270956203546047
+    },
+    "snapshot_quarter": {
+      "mean": 2.2748658238669605e-16,
+      "std": 1.0000018391531802,
+      "min": -1.7754067903773576,
+      "max": 1.7435607158386708
+    },
+    "snapshot_day_of_month": {
+      "mean": 3.1519855050362526e-17,
+      "std": 1.0000018391531802,
+      "min": -1.5654984581718756,
+      "max": 1.7452484360701346
+    },
+    "snapshot_day_of_week": {
+      "mean": 6.408514476242862e-17,
+      "std": 1.0000018391531802,
+      "min": -0.8411274682878809,
+      "max": 2.447169723548429
+    },
+    "snapshot_is_weekend": {
+      "mean": 2.6240410008759517e-17,
+      "std": 1.0000018391531802,
+      "min": -0.33042048870089513,
+      "max": 3.026446707138748
+    },
+    "days_since_first_snapshot": {
+      "mean": 1.7772389248960629e-16,
+      "std": 1.0000018391531804,
+      "min": -2.582026172036356,
+      "max": 2.5594906711720715
+    },
+    "vendor_activity_days": {
+      "mean": -5.833525412305901e-17,
+      "std": 1.0000018391531802,
+      "min": -1.4794522541579251,
+      "max": 2.7478186506923006
+    },
+    "vendor_listing_count": {
+      "mean": -4.3071908062186936e-17,
+      "std": 1.0000018391531802,
+      "min": -0.9406688905537716,
+      "max": 2.5382695125948014
+    },
+    "marketplace_listing_count": {
+      "mean": 7.906099629133221e-17,
+      "std": 1.0000018391531804,
+      "min": -1.197853282930609,
+      "max": 1.163540518454423
+    },
+    "vendor_observation_number": {
+      "mean": 4.108558220495016e-17,
+      "std": 1.0000018391531802,
+      "min": -0.7367962127284553,
+      "max": 4.71328490571526
+    },
+    "vendor_previous_observation_gap": {
+      "mean": -1.547243299321278e-17,
+      "std": 1.0000018391531802,
+      "min": -0.05591237607325784,
+      "max": 69.55223739252416
+    },
+    "category_frequency": {
+      "mean": -4.3803712325379434e-17,
+      "std": 1.0000018391531802,
+      "min": -1.3258588379111176,
+      "max": 1.0919960110586664
+    },
+    "marketplace_vendor_count": {
+      "mean": 8.538587599463878e-17,
+      "std": 1.0000018391531802,
+      "min": -1.4845102224374755,
+      "max": 1.623702304535281
+    }
+  }
+}

@@ -1,0 +1,16 @@
+[
+  "snapshot_year",
+  "snapshot_month",
+  "snapshot_quarter",
+  "snapshot_day_of_month",
+  "snapshot_day_of_week",
+  "snapshot_is_weekend",
+  "days_since_first_snapshot",
+  "vendor_activity_days",
+  "vendor_listing_count",
+  "marketplace_listing_count",
+  "vendor_observation_number",
+  "vendor_previous_observation_gap",
+  "category_frequency",
+  "marketplace_vendor_count"
+]

@@ -1,0 +1,22 @@
+{
+  "label2id": {
+    "auth_access": 0,
+    "dos": 1,
+    "file_inclusion": 2,
+    "info_disclosure": 3,
+    "injection": 4,
+    "memory_corruption": 5,
+    "rce": 6,
+    "xss": 7
+  },
+  "id2label": {
+    "0": "auth_access",
+    "1": "dos",
+    "2": "file_inclusion",
+    "3": "info_disclosure",
+    "4": "injection",
+    "5": "memory_corruption",
+    "6": "rce",
+    "7": "xss"
+  }
+}

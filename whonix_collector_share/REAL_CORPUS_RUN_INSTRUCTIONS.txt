@@ -1,0 +1,36 @@
+===============================================================================
+GHOST Protocol Controlled Laboratory - Whonix Workstation Run Instructions
+===============================================================================
+
+To execute the CONTROLLED LABORATORY OBSERVATION BATCH inside Whonix Workstation:
+
+1. Open a terminal inside Whonix Workstation.
+
+2. Navigate to the shared folder mount:
+   cd /media/sf_whonix_collector_share
+
+3. Run the single execution command:
+   bash run_real_corpus_batch.sh
+
+===============================================================================
+WHAT THIS RUN DOES:
+- Connects through Whonix Gateway SOCKS5 proxy: socks5h://10.152.152.10:9050
+- Loads approved seed sources from config/seed_sources.yaml:
+    1. CISA_KEV           (https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+    2. EXPLOIT_DB         (https://www.exploit-db.com)
+    3. 0X00SEC_FORUM      (https://0x00sec.org)
+    4. RANSOMWARE_LIVE    (https://www.ransomware.live)
+    5. VX_UNDERGROUND      (https://vx-underground.org)
+    6. SHADOWBOARD_LAB_ONION (http://shadowboard.lab.onion)
+    7. DREAD_FORUM_ONION  (http://dreadlab.lab.onion)
+- Enforces strict max 5 pages cap per source.
+- Uses passive HTTP GET requests only.
+- Stores raw evidence in temporary sqlite database.
+
+SAFETY INVARIANTS:
+- No login automation
+- No CAPTCHA bypass
+- No JavaScript execution
+- No active probing or exploitation
+- Weak labels remain WEAK_SUPERVISION (no auto-promotion to HUMAN_VERIFIED)
+===============================================================================

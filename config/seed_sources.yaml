@@ -1,0 +1,689 @@
+# DarkWatch Approval-Gated Seed Source Registry
+#
+# REGISTRY POLICY & RULES:
+# 1. This registry is strictly APPROVAL-GATED.
+# 2. Only sources with `approved: true` AND `collection_allowed: true` AND a valid `url` will be collected.
+# 3. External or live .onion targets must NEVER be added or approved automatically by the crawler.
+# 4. Search engines (Ahmia, Google, Bing) and CTI APIs (VirusTotal, HIBP) are REFERENCE_ONLY and MUST NOT be crawled as corpus data.
+# 5. Volatile or unverified dark web targets (Torch, Haystak, ransomware blogs) remain PENDING_REVIEW (approved: false).
+# 6. Collection must remain passive, text/metadata focused, and research-oriented. No stealer logs, raw credential dumps, or victim file downloads.
+
+sources:
+  # =========================================================================
+  # CATEGORY 1: ENABLED CORPUS & CTI SOURCES (Approved for Real Text Corpus Collection)
+  # =========================================================================
+  - source_id: CISA_KEV
+    source_name: "CISA Known Exploited Vulnerabilities Catalog"
+    source_type: SURFACE_CTI_REFERENCE
+    category: vulnerability_cti
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    description: "CISA Known Exploited Vulnerabilities (KEV) Catalog"
+    max_pages_cap: 10
+    notes: "Core approved surface CTI vulnerability source."
+
+  - source_id: EXPLOIT_DB
+    source_name: "Exploit-DB Vulnerability Archive"
+    source_type: SURFACE_CTI_REFERENCE
+    category: vulnerability_exploit
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "https://www.exploit-db.com"
+    description: "Exploit-DB Vulnerability & Exploit Archive"
+    max_pages_cap: 10
+    notes: "Core approved surface CTI exploit repository."
+
+  - source_id: 0X00SEC_FORUM
+    source_name: "0x00sec Cybersecurity Forum"
+    source_type: SURFACE_CTI_REFERENCE
+    category: security_forum
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "https://0x00sec.org"
+    description: "0x00sec Cybersecurity & Threat Discussion Forum"
+    max_pages_cap: 10
+    notes: "Core approved surface security discussion forum."
+
+  - source_id: RANSOMWARE_LIVE
+    source_name: "Ransomware.live Threat Intelligence Feed"
+    source_type: SURFACE_CTI_REFERENCE
+    category: ransomware_cti
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "https://www.ransomware.live"
+    description: "Ransomware.live Cyber Threat Intelligence Feed"
+    max_pages_cap: 10
+    notes: "Core approved surface ransomware CTI feed."
+
+  - source_id: VX_UNDERGROUND
+    source_name: "vx-underground Malware Research Library"
+    source_type: SURFACE_CTI_REFERENCE
+    category: malware_cti
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "https://vx-underground.org"
+    description: "vx-underground Malware & Security Research Library"
+    max_pages_cap: 10
+    notes: "Core approved surface malware CTI library."
+
+  - source_id: PROPUBLICA_ONION
+    source_name: "ProPublica Onion News Service"
+    source_type: DARK_WEB_CORPUS
+    category: security_intelligence
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "http://http://shadowboard.lab.onion"
+    description: "ProPublica Onion Service (Dark Web News & Intelligence)"
+    max_pages_cap: 10
+    notes: "Core approved dark web news & security intelligence onion service."
+
+  - source_id: DREAD_FORUM_ONION
+    source_name: "Dread Darknet Hacker Forum"
+    source_type: DARK_WEB_CORPUS
+    category: hacker_forum
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "http://http://dreadlab.lab.onion"
+    description: "Dread Darknet Hacker Discussion Forum"
+    max_pages_cap: 10
+    notes: "Core approved dark web hacker discussion forum."
+
+  - source_id: DARKWATCH_LAB_FORUM_ONION
+    source_name: "DarkWatch Controlled Docker Laboratory Forum"
+    source_type: DARK_WEB_CORPUS
+    category: hacker_forum
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "http://http://shadowforum.lab.onion"
+    description: "Controlled Docker Laboratory Forum Onion Service"
+    max_pages_cap: 10
+    notes: "Approved mock dark web laboratory environment service."
+
+
+  - source_id: REDDIT_CYBERSECURITY
+    source_name: "Reddit Cybersecurity & Netsec"
+    source_type: SURFACE_CORPUS
+    category: security_forum
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "https://www.reddit.com/r/netsec"
+    description: "Reddit Netsec & Cybersecurity Discussion Threads"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Approved surface corpus source for public threat discussions."
+
+  - source_id: FOURCHAN_TECH
+    source_name: "4chan /g/ Technology Board"
+    source_type: SURFACE_CORPUS
+    category: security_forum
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "https://boards.4chan.org/g/"
+    description: "4chan Technology & Security Board Discussions"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Approved surface corpus source for technical and security text."
+
+  - source_id: FOURPLEBS_ARCHIVE
+    source_name: "4plebs Discussion Archive"
+    source_type: SURFACE_CORPUS
+    category: security_forum
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "https://archive.4plebs.org"
+    description: "4plebs Searchable Tech & Security Discussion Archive"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Approved surface corpus source for threat text archives."
+
+  - source_id: HACKER_NEWS
+    source_name: "Hacker News (Y Combinator)"
+    source_type: SURFACE_CORPUS
+    category: security_forum
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "https://news.ycombinator.com"
+    description: "Hacker News Technology & Cybersecurity Discussions"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Approved surface corpus source for tech news & vulnerability discussions."
+
+  - source_id: PASTEBIN_PUBLIC
+    source_name: "Pastebin Public Pastes"
+    source_type: SURFACE_CORPUS
+    category: public_paste
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "https://pastebin.com"
+    description: "Pastebin Public Text & Security Paste Repository"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Approved surface corpus source for public threat text & code snippets."
+
+  - source_id: PSBDMP_PASTE_DUMP
+    source_name: "PSBDMP Indexed Paste Archive"
+    source_type: SURFACE_CORPUS
+    category: public_paste
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "https://psbdmp.ws"
+    description: "PSBDMP Indexed Public Paste Archive"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Approved surface corpus source for indexed security paste research."
+
+  - source_id: OCCRP_ALEPH
+    source_name: "OCCRP Aleph Investigative Data"
+    source_type: SURFACE_CORPUS
+    category: security_intelligence
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "https://aleph.occrp.org"
+    description: "OCCRP Aleph Cybercrime & Financial Security Document Archive"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Approved surface corpus source for public investigative report text."
+
+  - source_id: CRYPTOME_ARCHIVE
+    source_name: "Cryptome Document Archive"
+    source_type: SURFACE_CORPUS
+    category: security_archive
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "https://cryptome.org"
+    description: "Cryptome Intelligence & Security Document Repository"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Approved surface corpus source for security & cryptography archives."
+
+  - source_id: MUCKROCK_PUBLIC_RECORDS
+    source_name: "MuckRock Public FOIA Archive"
+    source_type: SURFACE_CORPUS
+    category: public_records
+    approval_status: APPROVED
+    approved: true
+    collection_allowed: true
+    url: "https://www.muckrock.com"
+    description: "MuckRock FOIA Security Disclosures & Government Reports"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Approved surface corpus source for public security disclosures."
+
+  # =========================================================================
+  # CATEGORY 2: DISCOVERY ONLY SOURCES (DO NOT CRAWL AS CORPUS)
+  # =========================================================================
+  - source_id: AHMIA_SEARCH_ENGINE
+    source_name: "Ahmia Darknet Search Engine"
+    source_type: DISCOVERY_ONLY
+    category: discovery_search_engine
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://ahmia.fi"
+    description: "Ahmia Onion Service Search Engine"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Discovery tool only; respect Ahmia terms; do NOT crawl as raw corpus."
+
+  - source_id: TOR_LINK_INDEX
+    source_name: "Tor Link Onion Directory"
+    source_type: DISCOVERY_ONLY
+    category: discovery_search_engine
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://tor.link"
+    description: "Tor Link Onion Service Directory & Index"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Onion directory for OSINT lookup only."
+
+  - source_id: ONIONLAND_SEARCH
+    source_name: "Onionland Search Engine"
+    source_type: DISCOVERY_ONLY
+    category: discovery_search_engine
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://onionlandsearchengine.com"
+    description: "Onionland Surface-Accessible Dark Web Search Engine"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Surface-accessible discovery tool only."
+
+  - source_id: TOR2WEB_PROXY
+    source_name: "Tor2Web / Onion.ly Gateway"
+    source_type: DISCOVERY_ONLY
+    category: discovery_search_engine
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://onion.ly"
+    description: "Tor2Web / Onion.ly Gateway Proxy"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Surface-to-Tor proxy gateway; discovery/fallback gateway only."
+
+  - source_id: GOOGLE_SEARCH_ENGINE
+    source_name: "Google Search & Custom Search API"
+    source_type: DISCOVERY_ONLY
+    category: discovery_search_engine
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://www.google.com"
+    description: "Google Search Engine & Custom Search Engine (CSE)"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Surface search engine discovery tool."
+
+  - source_id: BING_SEARCH_ENGINE
+    source_name: "Bing Search Engine"
+    source_type: DISCOVERY_ONLY
+    category: discovery_search_engine
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://www.bing.com"
+    description: "Bing Web Search Engine"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Surface search engine discovery tool."
+
+  - source_id: YANDEX_SEARCH_ENGINE
+    source_name: "Yandex Search Engine"
+    source_type: DISCOVERY_ONLY
+    category: discovery_search_engine
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://yandex.com"
+    description: "Yandex Web & Image Search Engine"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Surface search engine discovery tool."
+
+  - source_id: MILLION_SHORT_ENGINE
+    source_name: "Million Short Discovery Engine"
+    source_type: DISCOVERY_ONLY
+    category: discovery_search_engine
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://millionshort.com"
+    description: "Million Short Alternative Discovery Engine"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Discovery tool filtering top site results."
+
+  - source_id: DEEPDARK_CTI_REPO
+    source_name: "deepdarkCTI GitHub Repository"
+    source_type: DISCOVERY_ONLY
+    category: github_curated_repository
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://github.com/joxean/deepdarkCTI"
+    description: "deepdarkCTI GitHub Curated Darknet CTI Repository"
+    max_pages_cap: 0
+    notes: "GitHub CTI reference repository. Source-discovery tool only."
+
+  # =========================================================================
+  # CATEGORY 3: CTI & ENRICHMENT REFERENCE SOURCES (API / LOOKUP ONLY)
+  # =========================================================================
+  - source_id: VIRUSTOTAL_REF
+    source_name: "VirusTotal API"
+    source_type: CTI_REFERENCE
+    category: threat_feed
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://www.virustotal.com"
+    description: "VirusTotal Malware Reputation & Hash Query API"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "CTI enrichment lookup API; do NOT crawl HTML pages."
+
+  - source_id: HUDSON_ROCK_CAVALIER
+    source_name: "Hudson Rock Cavalier API"
+    source_type: CTI_REFERENCE
+    category: breach_intelligence
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://cavalier.hudsonrock.com"
+    description: "Hudson Rock Cavalier Infostealer Exposure API"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Infostealer metadata API only; no credential harvesting."
+
+  - source_id: HACK_NOTICE_REF
+    source_name: "Hack Notice Breach Tracker"
+    source_type: CTI_REFERENCE
+    category: breach_intelligence
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://app.hacknotice.com"
+    description: "Hack Notice Breach & Leak Tracker"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Data breach notification tracker."
+
+  - source_id: DEHASHED_LOOKUP_REF
+    source_name: "DeHashed Lookup API"
+    source_type: CTI_REFERENCE
+    category: breach_intelligence
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://dehashed.com"
+    description: "DeHashed Breach Notification & Metadata Query"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Metadata lookup reference ONLY; strictly no raw credential dumps."
+
+  - source_id: HIBP_API_REF
+    source_name: "Have I Been Pwned API"
+    source_type: CTI_REFERENCE
+    category: breach_intelligence
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://haveibeenpwned.com"
+    description: "Have I Been Pwned Breach Statistics API"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Domain exposure statistics API reference."
+
+  - source_id: BREACH_DIRECTORY_REF
+    source_name: "Breach Directory Lookup"
+    source_type: CTI_REFERENCE
+    category: breach_intelligence
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://breachdirectory.org"
+    description: "Breach Directory Leak Metadata Search Engine"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Metadata reference only."
+
+  - source_id: GRAY_HAT_WARFARE_REF
+    source_name: "Gray Hat Warfare Bucket Search"
+    source_type: CTI_REFERENCE
+    category: cloud_storage_search
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://grayhatwarfare.com"
+    description: "Gray Hat Warfare Public S3 Bucket Search Engine"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Bucket URL reference ONLY; strictly no file downloads."
+
+  - source_id: THREAT_CROWD_REF
+    source_name: "Threat Crowd CTI Engine"
+    source_type: CTI_REFERENCE
+    category: threat_feed
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://threatcrowd.org"
+    description: "Threat Crowd Open Threat Intelligence Graph Engine"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Threat graph lookup reference."
+
+  - source_id: UNFURL_URL_ANALYZER_REF
+    source_name: "UNFURL Link Analyzer"
+    source_type: CTI_REFERENCE
+    category: url_analysis
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://dfir.blog/unfurl"
+    description: "UNFURL URL Expansion & Parameter Analyzer"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "URL analysis utility."
+
+  - source_id: OSINT_SH_TOOLKIT_REF
+    source_name: "OSINT.sh Threat Toolkit"
+    source_type: CTI_REFERENCE
+    category: threat_feed
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://osint.sh"
+    description: "OSINT.sh Domain WHOIS & DNS Intelligence Platform"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Domain WHOIS & DNS threat intelligence."
+
+  - source_id: BLACKLIGHT_PRIVACY_INSPECTOR_REF
+    source_name: "Blacklight Privacy Inspector"
+    source_type: CTI_REFERENCE
+    category: site_inspection
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://themarkup.org/blacklight"
+    description: "Blacklight Website Tracker & Privacy Script Inspector"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Website tracker & privacy inspection utility."
+
+  - source_id: CENSYS_SCANNER_REF
+    source_name: "Censys Host Scanner"
+    source_type: CTI_REFERENCE
+    category: infrastructure_scan
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://censys.io"
+    description: "Censys Internet Host & Certificate Search Engine"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Infrastructure CTI lookup reference."
+
+  # =========================================================================
+  # CATEGORY 4: HISTORICAL & ARCHIVE REFERENCE SOURCES
+  # =========================================================================
+  - source_id: PUSHSHIFT_ARCHIVE
+    source_name: "Pushshift Reddit Archive"
+    source_type: ARCHIVE_REFERENCE
+    category: social_archive
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://pushshift.io"
+    description: "Pushshift Reddit Historical Dataset Archive"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Bulk historical dataset reference."
+
+  - source_id: ANNAS_ARCHIVE_REF
+    source_name: "Anna's Archive Open Library"
+    source_type: ARCHIVE_REFERENCE
+    category: document_archive
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://annas-archive.org"
+    description: "Anna's Archive Open Library & Paper Search Engine"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Literature lookup reference."
+
+  - source_id: WAYBACK_MACHINE_REF
+    source_name: "Wayback Machine (Internet Archive)"
+    source_type: ARCHIVE_REFERENCE
+    category: web_archive
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://web.archive.org"
+    description: "Internet Archive Wayback Machine Historical Snapshots"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Historical web page snapshot lookup."
+
+  - source_id: MEMORY_LOL_REF
+    source_name: "Memory.lol Social Handle History"
+    source_type: ARCHIVE_REFERENCE
+    category: social_archive
+    approval_status: REFERENCE_ONLY
+    approved: false
+    collection_allowed: false
+    url: "https://memory.lol"
+    description: "Memory.lol Social Handle History Lookup"
+    max_pages_cap: 0
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Social handle history lookup tool."
+
+  # =========================================================================
+  # CATEGORY 5: UNAPPROVED / PENDING REVIEW SOURCES (DARK WEB & VOLATILE)
+  # =========================================================================
+  - source_id: TORCH_SEARCH_ONION
+    source_name: "Torch Darknet Search Engine"
+    source_type: DARK_WEB_CORPUS
+    category: discovery_search_engine
+    approval_status: PENDING_REVIEW
+    approved: false
+    collection_allowed: false
+    url: "http://http://shadowboard.lab.onion"
+    description: "Torch Darknet Onion Search Engine"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Darknet search index; pending human review for volatile content."
+
+  - source_id: HAYSTAK_SEARCH_ONION
+    source_name: "Haystak Darknet Search Engine"
+    source_type: DARK_WEB_CORPUS
+    category: discovery_search_engine
+    approval_status: PENDING_REVIEW
+    approved: false
+    collection_allowed: false
+    url: "http://http://pastevault.lab.onion"
+    description: "Haystak Darknet Onion Search Engine"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Darknet search index; pending human review for volatile content."
+
+  - source_id: TOR66_DIRECTORY_ONION
+    source_name: "Tor66 Onion Directory"
+    source_type: DARK_WEB_CORPUS
+    category: discovery_search_engine
+    approval_status: PENDING_REVIEW
+    approved: false
+    collection_allowed: false
+    url: "http://http://shadowforum.lab.onion"
+    description: "Tor66 Darknet Onion Link Directory"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Darknet link directory; pending human review for volatile content."
+
+  - source_id: EVEREST_LEAK_SITE_ONION
+    source_name: "Everest Ransomware Leak Portal"
+    source_type: DARK_WEB_CORPUS
+    category: ransomware_leak
+    approval_status: PENDING_REVIEW
+    approved: false
+    collection_allowed: false
+    url: "http://http://leaklocker.lab.onion"
+    description: "Everest Ransomware Public Leak Blog & Threat Claims"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Public announcements ONLY; strictly no victim file downloads."
+
+  - source_id: RANSOMWARE_GROUP_PORTALS_ONION
+    source_name: "Ransomware Group Leak Portals"
+    source_type: DARK_WEB_CORPUS
+    category: ransomware_leak
+    approval_status: PENDING_REVIEW
+    approved: false
+    collection_allowed: false
+    url: "http://http://leaklocker.lab.onion"
+    description: "Curated Ransomware Group Leak Blogs (Conti/REvil/Clop)"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Public extortion claims & notices ONLY; strictly no victim datasets."
+
+  - source_id: TELEGRAM_LEAK_CHANNELS_REF
+    source_name: "Telegram Threat Channels"
+    source_type: DARK_WEB_CORPUS
+    category: threat_feed
+    approval_status: PENDING_REVIEW
+    approved: false
+    collection_allowed: false
+    url: "https://t.me"
+    description: "Telegram Threat Actor Public Channels"
+    max_pages_cap: 10
+    discovered_from: "Michael Bazzell - OSINT Techniques, 10th Edition (2023)"
+    notes: "Public post text ONLY; strictly no stealer log downloads."
+
+  - source_id: ALIENVAULT_OTX_REF
+    source_name: "AlienVault OTX Reference"
+    source_type: SURFACE_CTI_REFERENCE
+    category: threat_feed
+    approval_status: PENDING_REVIEW
+    approved: false
+    collection_allowed: false
+    url: ""
+    description: "AlienVault Open Threat Exchange (OTX) CTI Reference"
+    max_pages_cap: 100
+    notes: "Open threat intelligence reference feed. Pending human review."
+
+  - source_id: THREATFOX_ABUSE_CH_REF
+    source_name: "ThreatFox (abuse.ch) Reference"
+    source_type: SURFACE_CTI_REFERENCE
+    category: threat_feed
+    approval_status: PENDING_REVIEW
+    approved: false
+    collection_allowed: false
+    url: ""
+    description: "ThreatFox (abuse.ch) Shared IOC & Threat Intelligence Reference"
+    max_pages_cap: 100
+    notes: "Abuse.ch malware IOC reference feed. Pending human review."
+
+  - source_id: DARKWEB_RANSOMWARE_LEAK_001
+    source_name: "Darknet Ransomware Leak Site Portal"
+    source_type: DARK_WEB_CORPUS
+    category: ransomware_leak
+    approval_status: PENDING_REVIEW
+    approved: false
+    collection_allowed: false
+    url: ""
+    description: "Darknet Ransomware Data Leak Site Portal"
+    max_pages_cap: 150
+    notes: "Darknet ransomware leak site portal. Pending human review."
+
+  - source_id: DARKWEB_MARKETPLACE_INFO_001
+    source_name: "Darknet Marketplace Service Listing"
+    source_type: DARK_WEB_CORPUS
+    category: marketplace_service
+    approval_status: PENDING_REVIEW
+    approved: false
+    collection_allowed: false
+    url: ""
+    description: "Darknet Threat Marketplace Service Listing"
+    max_pages_cap: 150
+    notes: "Darknet marketplace service information page. Pending human review."

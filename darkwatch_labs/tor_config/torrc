@@ -1,0 +1,26 @@
+DataDirectory /var/lib/tor
+
+# Listen on all container interfaces for SOCKS proxy access
+SocksPort 0.0.0.0:9050
+
+# Persistent Tor v3 Onion Services for Controlled Lab
+HiddenServiceDir /var/lib/tor/shadowboard
+HiddenServicePort 80 darkwatch-services:8080
+
+HiddenServiceDir /var/lib/tor/services/hs_shadowboard
+HiddenServicePort 80 darkwatch-services:8080
+
+HiddenServiceDir /var/lib/tor/services/hs_shadowforum
+HiddenServicePort 80 darkwatch-services:8080
+
+HiddenServiceDir /var/lib/tor/services/hs_dreadlab
+HiddenServicePort 80 darkwatch-services:8080
+
+HiddenServiceDir /var/lib/tor/services/hs_pastevault
+HiddenServicePort 80 darkwatch-services:8080
+
+HiddenServiceDir /var/lib/tor/services/hs_leaklocker
+HiddenServicePort 80 darkwatch-services:8080
+
+HiddenServiceDir /var/lib/tor/services/hs_forum
+HiddenServicePort 80 darkwatch-services:8080

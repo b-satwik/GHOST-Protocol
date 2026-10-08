@@ -1,0 +1,16 @@
+[
+    "price_value",
+    "vendor_observation_number",
+    "vendor_previous_observation_gap",
+    "vendor_listing_count",
+    "vendor_category_count",
+    "vendor_marketplace_count",
+    "vendor_activity_days",
+    "marketplace_listing_count",
+    "marketplace_vendor_count",
+    "total_indicator_count",
+    "has_network_indicator",
+    "text_has_malware_term",
+    "text_has_credential_term",
+    "text_has_exploit_term"
+]

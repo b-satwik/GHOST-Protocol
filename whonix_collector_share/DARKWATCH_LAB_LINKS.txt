@@ -1,0 +1,56 @@
+===============================
+DARKWATCH CONTROLLED LAB
+WHONIX WORKSTATION
+===============================
+
+TOR / ONION:
+
+Forum:
+http://shadowboard.lab.onion/forum
+
+Market:
+http://shadowboard.lab.onion/market
+
+Paste:
+http://shadowboard.lab.onion/paste
+
+Leak:
+http://shadowboard.lab.onion/leak
+
+Barrier:
+http://shadowboard.lab.onion/barrier
+
+Session:
+http://shadowboard.lab.onion/session_gated
+
+Dynamic:
+http://shadowboard.lab.onion/dynamic_forum
+
+Mirror:
+http://shadowboard.lab.onion/forum_mirror
+
+===============================
+WHONIX TOR PROXY
+===============================
+
+socks5h://10.152.152.10:9050
+
+===============================
+HOST / DOCKER
+===============================
+
+Docker runs on the HOST.
+
+Do NOT run Docker commands inside Whonix.
+
+===============================
+ACCESS CONDITIONS
+===============================
+
+/barrier
+Expected: blocked/challenge
+
+/session_gated
+Expected: authentication required
+
+Do not bypass either.

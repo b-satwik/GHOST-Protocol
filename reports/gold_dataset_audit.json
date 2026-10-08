@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "total_records": 1,
+    "canonical_records": 1,
+    "duplicate_records": 0,
+    "schema_violation_count": 0
+  },
+  "annotation_tiers": {
+    "WEAK_SUPERVISION": 1
+  },
+  "label_distributions": {
+    "activity_categories": {
+      "CREDENTIAL_LEAK": 1,
+      "ACCESS_BROKERAGE": 1,
+      "MALWARE_SALES": 1,
+      "EXPLOIT_DISTRIBUTION": 1
+    },
+    "intent": {
+      "ILLICIT_SALE": 1
+    },
+    "severity": {
+      "CRITICAL": 1
+    },
+    "target_sector": {
+      "TECHNOLOGY": 1
+    }
+  },
+  "schema_errors": [],
+  "duplicates": {
+    "total_duplicate_records": 0,
+    "exact_duplicates": 0
+  },
+  "agreement_metrics": {
+    "human_verified_count": 0,
+    "cohens_kappa_intent": null,
+    "cohens_kappa_severity": null,
+    "message": "No HUMAN_VERIFIED records available yet for agreement scoring."
+  }
+}
